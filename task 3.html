@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function numberChecker (wholeNumber) {
+           let totaldata = [];
+           let divisibleBy2 = "yu";
+           let divisibleBy3 = "gi";
+           let divisibleBy5 = "oh";
+           
+           for (i = 1; i<= wholeNumber; i++ ) {
+            
+            if (i % 2 == 0 && i % 3 == 0 && i % 5 == 0){
+                totaldata.push(divisibleBy2 + "-" + divisibleBy3 + "-" + divisibleBy5)
+            
+                
+               } else if (i % 2 == 0 && i % 3 == 0) {
+                totaldata.push(divisibleBy2 + "-" + divisibleBy3)   
+               } else if (i % 2 == 0 && i % 5 == 0) {
+                totaldata.push(divisibleBy2 + "-" + divisibleBy5)   
+               } else if (i % 3 == 0 && i % 5 == 0) {
+                totaldata.push(divisibleBy3 + "-" + divisibleBy5)   
+               }else if (i % 2 == 0) {
+                totaldata.push(divisibleBy2)   
+               } else if (i % 3 == 0) {
+                totaldata.push(divisibleBy3)   
+               } else if (i % 5 == 0) {
+                totaldata.push(divisibleBy5)   
+               } else{
+                   totaldata.push(i)
+               }
+        
+           }
+ 
+            return totaldata
+        }
+        console.log(numberChecker(100));
+
+    </script>
+</body>
+</html>
